@@ -1,11 +1,11 @@
 module Data.UUID.Aeson where
 
-import Control.Applicative ((<$>), (<*>), pure)
+import Control.Applicative (pure)
 
 import Data.UUID (UUID, fromString)
 
-import Data.Aeson
-import Data.Aeson.Types
+import Data.Aeson (ToJSON,FromJSON, toJSON, parseJSON) 
+import Data.Aeson.Types (Value(String), typeMismatch)
 
 import qualified Data.Text as T
 
