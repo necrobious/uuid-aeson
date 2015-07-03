@@ -5,3 +5,6 @@ cabal-dev
 *.chi
 *.chs.h
 .virthualenv
+/default.nix
+/shell.nix
+/uuid-aeson.nix
