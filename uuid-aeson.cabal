@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                uuid-aeson
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            Aeson types for UUID instances.
 -- description:         
 license:             BSD3
@@ -21,4 +21,4 @@ library
   build-depends:     base >= 4,
                      text,  
                      aeson, 
-                     uuid >= 1
+                     uuid >= 1.3
