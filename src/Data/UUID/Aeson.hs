@@ -1,7 +1,7 @@
 module Data.UUID.Aeson where
 
 import Control.Applicative (pure)
-import Data.UUID (UUID, fromASCIIBytes, toASCIIBytes)
+import Data.UUID.Types (UUID, fromASCIIBytes, toASCIIBytes)
 import Data.Aeson (ToJSON,FromJSON, toJSON, parseJSON) 
 import Data.Aeson.Types (Value(String), typeMismatch)
 import qualified Data.Text.Encoding as T
