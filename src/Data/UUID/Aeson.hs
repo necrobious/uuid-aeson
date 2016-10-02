@@ -1,4 +1,5 @@
 {-# LANGUAGE CPP #-}
+{-# OPTIONS_GHC -fno-warn-orphans #-}
 module Data.UUID.Aeson () where
 
 import Control.Applicative (pure)
