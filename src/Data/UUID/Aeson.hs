@@ -2,7 +2,6 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 module Data.UUID.Aeson () where
 
-import Control.Applicative (pure)
 import Data.UUID.Types (UUID, toText, fromText)
 import Data.Aeson (ToJSON (..), FromJSON (..), withText)
 #if MIN_VERSION_aeson(1,0,0)
@@ -16,7 +15,7 @@ instance FromJSON UUID where
   parseJSON = withText "UUID" parser
     where
       parser t = case fromText t of
-        Just uuid -> pure uuid
+        Just uuid -> return uuid
         Nothing   -> fail "invalid UUID"
 
 #if MIN_VERSION_aeson(1,0,0)
@@ -27,6 +26,6 @@ instance FromJSONKey UUID where
   fromJSONKey = FromJSONKeyTextParser parser
     where
       parser t = case fromText t of
-        Just uuid -> pure uuid
+        Just uuid -> return uuid
         Nothing   -> fail "invalid UUID"
 #endif
